@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kontakt zum Mieterbund Mittelrhein e.V. – Geschäftsstelle Koblenz, Telefon 0261-15096, Öffnungszeiten und Kontaktformular.">
+  <title>Kontakt – Mieterbund Mittelrhein e.V.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" type="image/svg+xml" href="../assets/images/logo.svg">
+</head>
+<body>
+  <div id="top-bar"></div>
+  <div id="header"></div>
+
+  <section class="page-header">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="../index.html">Startseite</a>
+        <span>/</span>
+        <span>Kontakt</span>
+      </div>
+      <h1>Kontakt</h1>
+      <p>Wir sind für Sie da – telefonisch, per E-Mail oder über unser Kontaktformular.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+        <!-- Contact Form -->
+        <div class="contact-form-wrapper">
+          <h3 style="margin-bottom: var(--space-lg);">Nachricht senden</h3>
+          <form id="kontaktformular" onsubmit="handleContactSubmit(event)">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-md);">
+              <div class="form-group">
+                <label for="contact-vorname">Vorname *</label>
+                <input type="text" id="contact-vorname" name="vorname" required>
+              </div>
+              <div class="form-group">
+                <label for="contact-nachname">Nachname *</label>
+                <input type="text" id="contact-nachname" name="nachname" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="contact-email">E-Mail *</label>
+              <input type="email" id="contact-email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="contact-telefon">Telefon</label>
+              <input type="tel" id="contact-telefon" name="telefon">
+            </div>
+            <div class="form-group">
+              <label for="contact-mitglied">Sind Sie bereits Mitglied?</label>
+              <select id="contact-mitglied" name="mitglied">
+                <option value="">Bitte wählen...</option>
+                <option value="ja">Ja, ich bin Mitglied</option>
+                <option value="nein">Nein, noch nicht</option>
+                <option value="interesse">Ich möchte Mitglied werden</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="contact-betreff">Betreff *</label>
+              <input type="text" id="contact-betreff" name="betreff" required>
+            </div>
+            <div class="form-group">
+              <label for="contact-nachricht">Nachricht *</label>
+              <textarea id="contact-nachricht" name="nachricht" rows="6" required placeholder="Ihre Nachricht an uns..."></textarea>
+            </div>
+            <div class="form-group">
+              <label style="display: flex; align-items: flex-start; gap: var(--space-sm); font-weight: 400; cursor: pointer;">
+                <input type="checkbox" name="datenschutz" required style="margin-top: 4px; width: auto;">
+                <span>Ich habe die <a href="datenschutz.html">Datenschutzerklärung</a> gelesen und bin einverstanden. *</span>
+              </label>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; justify-content: center;">
+              Nachricht senden
+            </button>
+          </form>
+
+          <div id="contact-success" style="display: none; text-align: center; padding: var(--space-3xl) var(--space-xl);">
+            <div style="width: 64px; height: 64px; background: var(--success-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto var(--space-lg);" id="contact-success-icon"></div>
+            <h3 style="color: var(--success);">Nachricht gesendet!</h3>
+            <p style="color: var(--gray-600);">Vielen Dank für Ihre Nachricht. Wir werden uns so schnell wie möglich bei Ihnen melden.</p>
+          </div>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="contact-info-cards">
+          <div class="contact-info-card">
+            <div class="contact-info-icon" id="ci-icon-1"></div>
+            <div>
+              <h4>Geschäftsstelle Koblenz</h4>
+              <p>Markenbildchenweg 15<br>56068 Koblenz</p>
+            </div>
+          </div>
+          <div class="contact-info-card">
+            <div class="contact-info-icon" id="ci-icon-2"></div>
+            <div>
+              <h4>Telefon & Fax</h4>
+              <p>Tel: <a href="tel:026115096">0261 – 15 0 96</a><br>Fax: 0261 – 157 00</p>
+            </div>
+          </div>
+          <div class="contact-info-card">
+            <div class="contact-info-icon" id="ci-icon-3"></div>
+            <div>
+              <h4>E-Mail</h4>
+              <p><a href="mailto:koblenz@mieterbund-mittelrhein.de">koblenz@mieterbund-mittelrhein.de</a></p>
+            </div>
+          </div>
+          <div class="contact-info-card">
+            <div class="contact-info-icon" id="ci-icon-4"></div>
+            <div>
+              <h4>Bürozeiten</h4>
+              <table class="hours-table">
+                <tr><td>Mo, Mi, Fr</td><td>08:30 – 12:00 Uhr</td></tr>
+                <tr><td>Di, Do</td><td>13:30 – 17:00 Uhr</td></tr>
+                <tr><td>Sa, So</td><td>Geschlossen</td></tr>
+              </table>
+            </div>
+          </div>
+          <div class="contact-info-card">
+            <div class="contact-info-icon" id="ci-icon-5"></div>
+            <div>
+              <h4>Geschäftsstelle Neuwied</h4>
+              <p>Hermannstraße 32<br>56564 Neuwied<br>Tel: <a href="tel:0263124547">02631 – 24 54 7</a></p>
+            </div>
+          </div>
+
+          <div class="info-box warning">
+            <h4 id="ci-info-icon">Beratung nur für Mitglieder</h4>
+            <p>Aufgrund des Rechtsdienstleistungsgesetzes ist es dem Verein nicht gestattet, Nichtmitgliedern mietrechtliche Auskünfte zu erteilen. Beratungstermine werden ausschließlich telefonisch vergeben.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="cta-section"></div>
+  <div id="footer"></div>
+
+  <script src="../js/components.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      initPage('kontakt');
+
+      document.getElementById('ci-icon-1').innerHTML = Icons.mapPin;
+      document.getElementById('ci-icon-2').innerHTML = Icons.phone;
+      document.getElementById('ci-icon-3').innerHTML = Icons.mail;
+      document.getElementById('ci-icon-4').innerHTML = Icons.clock;
+      document.getElementById('ci-icon-5').innerHTML = Icons.building;
+      document.getElementById('ci-info-icon').innerHTML = `${Icons.alertTriangle} Beratung nur für Mitglieder`;
+    });
+
+    function handleContactSubmit(e) {
+      e.preventDefault();
+      const form = document.getElementById('kontaktformular');
+      form.style.display = 'none';
+      const success = document.getElementById('contact-success');
+      success.style.display = 'block';
+      document.getElementById('contact-success-icon').innerHTML = '<svg style="width:32px;height:32px;stroke:white;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>';
+      success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+{
+  "vereinsname": "Mieterbund Mittelrhein e.V.",
+  "slogan": "Ihr starker Partner im Mietrecht",
+  "telefon_koblenz": "0261 – 15 0 96",
+  "telefon_neuwied": "02631 – 24 54 7",
+  "fax": "0261 – 157 00",
+  "email": "koblenz@mieterbund-mittelrhein.de",
+  "website": "www.mieterbund-mittelrhein.de",
+  "hauptstelle": {
+    "name": "Geschäftsstelle Koblenz",
+    "strasse": "Markenbildchenweg 15",
+    "plz": "56068",
+    "ort": "Koblenz",
+    "telefon": "0261 – 15 0 96",
+    "fax": "0261 – 157 00",
+    "email": "koblenz@mieterbund-mittelrhein.de"
+  },
+  "geschaeftsstelle_neuwied": {
+    "name": "Geschäftsstelle Neuwied",
+    "strasse": "Hermannstraße 32",
+    "plz": "56564",
+    "ort": "Neuwied",
+    "telefon": "02631 – 24 54 7"
+  },
+  "oeffnungszeiten": {
+    "buero": [
+      { "tage": "Montag, Mittwoch, Freitag", "zeiten": "08:30 – 12:00 Uhr" },
+      { "tage": "Dienstag, Donnerstag", "zeiten": "13:30 – 17:00 Uhr" }
+    ]
+  },
+  "mitgliedschaft": {
+    "vollmitgliedschaft": {
+      "preis": "120 €",
+      "zeitraum": "pro Jahr",
+      "mindestlaufzeit": "2 Jahre",
+      "beschreibung": "Umfassende mietrechtliche Beratung durch Volljuristen, Schriftwechselführung mit der Gegenseite und Kostenschutz für gerichtliche Verfahren."
+    },
+    "schnuppermitgliedschaft": {
+      "preis": "60 €",
+      "zeitraum": "für 3 Monate",
+      "beschreibung": "Testen Sie unsere Leistungen. Wird die Schnuppermitgliedschaft nicht gekündigt, geht sie automatisch in eine Vollmitgliedschaft über."
+    }
+  },
+  "aussenstellen": [
+    "Altenkirchen",
+    "Bad Neuenahr-Ahrweiler",
+    "Cochem",
+    "Mayen",
+    "Montabaur",
+    "Remagen",
+    "Westerburg"
+  ],
+  "leistungen": [
+    {
+      "titel": "Mietrechtliche Beratung",
+      "beschreibung": "Persönliche Beratung durch qualifizierte Volljuristen in allen Fragen des Mietrechts.",
+      "icon": "scales"
+    },
+    {
+      "titel": "Schriftwechsel",
+      "beschreibung": "Wir führen die gesamte Korrespondenz mit Vermietern und deren Anwälten für Sie.",
+      "icon": "mail"
+    },
+    {
+      "titel": "Kostenschutz",
+      "beschreibung": "Im Rahmen der Satzung übernehmen wir die Kosten für gerichtliche Verfahren.",
+      "icon": "shield"
+    },
+    {
+      "titel": "Mieterzeitung",
+      "beschreibung": "Alle zwei Monate erhalten Sie unsere Mieterzeitung mit aktuellen Informationen und Neuigkeiten.",
+      "icon": "newspaper"
+    }
+  ],
+  "vereinsregister": "VerR 20722, Amtsgericht Koblenz",
+  "farben": {
+    "primary": "#1a365d",
+    "primary_light": "#2c5282",
+    "secondary": "#c53030",
+    "accent": "#2b6cb0",
+    "success": "#276749",
+    "background": "#f7fafc",
+    "text": "#1a202c"
+  },
+  "social_media": {
+    "facebook": "",
+    "instagram": ""
+  },
+  "meta": {
+    "title": "Mieterbund Mittelrhein e.V. – Ihr starker Partner im Mietrecht",
+    "description": "Der Mieterbund Mittelrhein e.V. bietet mietrechtliche Beratung durch Volljuristen, Schriftwechselführung und Kostenschutz für Mieter in Koblenz und der Region Mittelrhein.",
+    "keywords": "Mieterbund, Mittelrhein, Koblenz, Mietrecht, Mieterberatung, Mieterschutz, Rechtsberatung"
+  }
+}

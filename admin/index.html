@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel – Mieterbund Mittelrhein e.V.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="admin.css">
+  <link rel="icon" type="image/svg+xml" href="../assets/images/logo.svg">
+</head>
+<body class="admin-body">
+  <div class="admin-layout">
+    <!-- Sidebar -->
+    <aside class="admin-sidebar">
+      <div class="admin-sidebar-header">
+        <img src="../assets/images/logo.svg" alt="Logo" style="height: 40px;">
+        <span class="admin-title">Admin Panel</span>
+      </div>
+      <nav class="admin-nav">
+        <a href="#" class="admin-nav-item active" data-section="dashboard">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+          Dashboard
+        </a>
+        <a href="#" class="admin-nav-item" data-section="kontakt">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.8.32 1.6.56 2.37a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.77.24 1.57.43 2.37.56A2 2 0 0 1 22 16.92z"/></svg>
+          Kontaktdaten
+        </a>
+        <a href="#" class="admin-nav-item" data-section="oeffnungszeiten">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          Öffnungszeiten
+        </a>
+        <a href="#" class="admin-nav-item" data-section="mitgliedschaft">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          Mitgliedschaft
+        </a>
+        <a href="#" class="admin-nav-item" data-section="aussenstellen">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Außenstellen
+        </a>
+        <a href="#" class="admin-nav-item" data-section="texte">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          Texte & Inhalte
+        </a>
+        <a href="#" class="admin-nav-item" data-section="design">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+          Design & Farben
+        </a>
+        <a href="#" class="admin-nav-item" data-section="nachrichten">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Eingegangene Nachrichten
+        </a>
+      </nav>
+      <div class="admin-sidebar-footer">
+        <a href="../index.html" class="admin-nav-item" target="_blank">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          Website anzeigen
+        </a>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="admin-main">
+      <header class="admin-header">
+        <h1 id="section-title">Dashboard</h1>
+        <div class="admin-header-actions">
+          <button class="btn btn-primary btn-sm" onclick="saveSettings()">Änderungen speichern</button>
+          <button class="btn btn-outline btn-sm" onclick="exportSettings()">Einstellungen exportieren</button>
+        </div>
+      </header>
+
+      <div class="admin-content">
+        <!-- Dashboard -->
+        <div id="section-dashboard" class="admin-section active">
+          <div class="admin-cards-grid">
+            <div class="admin-stat-card">
+              <div class="admin-stat-number" id="stat-messages">0</div>
+              <div class="admin-stat-label">Neue Nachrichten</div>
+            </div>
+            <div class="admin-stat-card">
+              <div class="admin-stat-number" id="stat-members">0</div>
+              <div class="admin-stat-label">Neue Anträge</div>
+            </div>
+            <div class="admin-stat-card">
+              <div class="admin-stat-number">9</div>
+              <div class="admin-stat-label">Beratungsstellen</div>
+            </div>
+            <div class="admin-stat-card">
+              <div class="admin-stat-number">5</div>
+              <div class="admin-stat-label">Mietrecht-Artikel</div>
+            </div>
+          </div>
+
+          <div class="admin-card" style="margin-top: var(--space-xl);">
+            <h3>Willkommen im Admin-Bereich</h3>
+            <p>Hier können Sie die Grundeinstellungen der Website verwalten. Ändern Sie Kontaktdaten, Öffnungszeiten, Mitgliedsbeiträge und mehr – ganz einfach und ohne technische Kenntnisse.</p>
+            <h4 style="margin-top: var(--space-lg);">Schnellanleitung:</h4>
+            <ul style="list-style: disc; padding-left: var(--space-xl); color: var(--gray-600);">
+              <li>Wählen Sie links den Bereich, den Sie bearbeiten möchten</li>
+              <li>Ändern Sie die Einträge in den Formularfeldern</li>
+              <li>Klicken Sie auf „Änderungen speichern" oben rechts</li>
+              <li>Die Website wird automatisch aktualisiert</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Kontaktdaten -->
+        <div id="section-kontakt" class="admin-section">
+          <div class="admin-card">
+            <h3>Geschäftsstelle Koblenz</h3>
+            <div class="admin-form-grid">
+              <div class="form-group">
+                <label>Straße & Hausnummer</label>
+                <input type="text" id="cfg-koblenz-strasse" value="Markenbildchenweg 15">
+              </div>
+              <div class="form-group">
+                <label>PLZ & Ort</label>
+                <input type="text" id="cfg-koblenz-plzort" value="56068 Koblenz">
+              </div>
+              <div class="form-group">
+                <label>Telefon</label>
+                <input type="text" id="cfg-koblenz-tel" value="0261 – 15 0 96">
+              </div>
+              <div class="form-group">
+                <label>Fax</label>
+                <input type="text" id="cfg-koblenz-fax" value="0261 – 157 00">
+              </div>
+              <div class="form-group" style="grid-column: 1 / -1;">
+                <label>E-Mail</label>
+                <input type="email" id="cfg-koblenz-email" value="koblenz@mieterbund-mittelrhein.de">
+              </div>
+            </div>
+          </div>
+
+          <div class="admin-card">
+            <h3>Geschäftsstelle Neuwied</h3>
+            <div class="admin-form-grid">
+              <div class="form-group">
+                <label>Straße & Hausnummer</label>
+                <input type="text" id="cfg-neuwied-strasse" value="Hermannstraße 32">
+              </div>
+              <div class="form-group">
+                <label>PLZ & Ort</label>
+                <input type="text" id="cfg-neuwied-plzort" value="56564 Neuwied">
+              </div>
+              <div class="form-group">
+                <label>Telefon</label>
+                <input type="text" id="cfg-neuwied-tel" value="02631 – 24 54 7">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Öffnungszeiten -->
+        <div id="section-oeffnungszeiten" class="admin-section">
+          <div class="admin-card">
+            <h3>Bürozeiten Koblenz</h3>
+            <div class="admin-form-grid">
+              <div class="form-group">
+                <label>Montag</label>
+                <input type="text" id="cfg-hours-mo" value="08:30 – 12:00 Uhr">
+              </div>
+              <div class="form-group">
+                <label>Dienstag</label>
+                <input type="text" id="cfg-hours-di" value="13:30 – 17:00 Uhr">
+              </div>
+              <div class="form-group">
+                <label>Mittwoch</label>
+                <input type="text" id="cfg-hours-mi" value="08:30 – 12:00 Uhr">
+              </div>
+              <div class="form-group">
+                <label>Donnerstag</label>
+                <input type="text" id="cfg-hours-do" value="13:30 – 17:00 Uhr">
+              </div>
+              <div class="form-group">
+                <label>Freitag</label>
+                <input type="text" id="cfg-hours-fr" value="08:30 – 12:00 Uhr">
+              </div>
+              <div class="form-group">
+                <label>Samstag / Sonntag</label>
+                <input type="text" id="cfg-hours-sa" value="Geschlossen">
+              </div>
+            </div>
+          </div>
+
+          <div class="admin-card">
+            <h3>Beratungszeiten (Anzeige in der Top-Bar)</h3>
+            <div class="form-group">
+              <label>Kompakte Anzeige</label>
+              <input type="text" id="cfg-hours-compact" value="Mo, Mi, Fr: 8:30–12:00 | Di, Do: 13:30–17:00">
+            </div>
+          </div>
+        </div>
+
+        <!-- Mitgliedschaft -->
+        <div id="section-mitgliedschaft" class="admin-section">
+          <div class="admin-card">
+            <h3>Vollmitgliedschaft</h3>
+            <div class="admin-form-grid">
+              <div class="form-group">
+                <label>Jahresbeitrag</label>
+                <input type="text" id="cfg-voll-preis" value="120 €">
+              </div>
+              <div class="form-group">
+                <label>Mindestlaufzeit</label>
+                <input type="text" id="cfg-voll-laufzeit" value="2 Jahre">
+              </div>
+              <div class="form-group" style="grid-column: 1 / -1;">
+                <label>Beschreibung</label>
+                <textarea id="cfg-voll-beschreibung" rows="3">Umfassende mietrechtliche Beratung durch Volljuristen, Schriftwechselführung mit der Gegenseite und Kostenschutz für gerichtliche Verfahren.</textarea>
+              </div>
+            </div>
+          </div>
+
+          <div class="admin-card">
+            <h3>Schnuppermitgliedschaft</h3>
+            <div class="admin-form-grid">
+              <div class="form-group">
+                <label>Beitrag</label>
+                <input type="text" id="cfg-schnupper-preis" value="60 €">
+              </div>
+              <div class="form-group">
+                <label>Zeitraum</label>
+                <input type="text" id="cfg-schnupper-zeitraum" value="3 Monate">
+              </div>
+              <div class="form-group" style="grid-column: 1 / -1;">
+                <label>Beschreibung</label>
+                <textarea id="cfg-schnupper-beschreibung" rows="3">Testen Sie unsere Leistungen. Wird die Schnuppermitgliedschaft nicht gekündigt, geht sie automatisch in eine Vollmitgliedschaft über.</textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Außenstellen -->
+        <div id="section-aussenstellen" class="admin-section">
+          <div class="admin-card">
+            <h3>Außenstellen verwalten</h3>
+            <p style="color: var(--gray-600); margin-bottom: var(--space-lg);">Hier können Sie die Außenstellen bearbeiten, hinzufügen oder entfernen.</p>
+            <div id="aussenstellen-list"></div>
+            <button class="btn btn-outline btn-sm" onclick="addAussenstelle()" style="margin-top: var(--space-md);">+ Außenstelle hinzufügen</button>
+          </div>
+        </div>
+
+        <!-- Texte -->
+        <div id="section-texte" class="admin-section">
+          <div class="admin-card">
+            <h3>Slogan / Untertitel</h3>
+            <div class="form-group">
+              <label>Website-Slogan</label>
+              <input type="text" id="cfg-slogan" value="Ihr starker Partner im Mietrecht">
+            </div>
+          </div>
+
+          <div class="admin-card">
+            <h3>Hero-Bereich (Startseite)</h3>
+            <div class="form-group">
+              <label>Überschrift</label>
+              <input type="text" id="cfg-hero-title" value="Ihr Recht als Mieter – professionell geschützt">
+            </div>
+            <div class="form-group">
+              <label>Beschreibung</label>
+              <textarea id="cfg-hero-desc" rows="3">Der Mieterbund Mittelrhein e.V. steht seit Jahrzehnten für kompetente mietrechtliche Beratung durch qualifizierte Volljuristen. Wir setzen uns für Ihre Interessen ein – in Koblenz und der gesamten Region Mittelrhein.</textarea>
+            </div>
+          </div>
+
+          <div class="admin-card">
+            <h3>SEO / Meta-Daten</h3>
+            <div class="form-group">
+              <label>Seitentitel (Browser-Tab)</label>
+              <input type="text" id="cfg-meta-title" value="Mieterbund Mittelrhein e.V. – Ihr starker Partner im Mietrecht">
+            </div>
+            <div class="form-group">
+              <label>Meta-Beschreibung</label>
+              <textarea id="cfg-meta-desc" rows="3">Der Mieterbund Mittelrhein e.V. bietet mietrechtliche Beratung durch Volljuristen, Schriftwechselführung und Kostenschutz für Mieter in Koblenz und der Region Mittelrhein.</textarea>
+            </div>
+          </div>
+        </div>
+
+        <!-- Design -->
+        <div id="section-design" class="admin-section">
+          <div class="admin-card">
+            <h3>Farbschema</h3>
+            <p style="color: var(--gray-600); margin-bottom: var(--space-lg);">Passen Sie die Farben der Website an. Änderungen werden in der Vorschau sofort sichtbar.</p>
+            <div class="admin-form-grid">
+              <div class="form-group">
+                <label>Primärfarbe (Dunkelblau)</label>
+                <div class="color-input-group">
+                  <input type="color" id="cfg-color-primary" value="#1a365d" onchange="previewColor('--primary', this.value)">
+                  <input type="text" id="cfg-color-primary-text" value="#1a365d" onchange="document.getElementById('cfg-color-primary').value = this.value; previewColor('--primary', this.value)">
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Sekundärfarbe (Rot)</label>
+                <div class="color-input-group">
+                  <input type="color" id="cfg-color-secondary" value="#c53030" onchange="previewColor('--secondary', this.value)">
+                  <input type="text" id="cfg-color-secondary-text" value="#c53030" onchange="document.getElementById('cfg-color-secondary').value = this.value; previewColor('--secondary', this.value)">
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Akzentfarbe (Blau)</label>
+                <div class="color-input-group">
+                  <input type="color" id="cfg-color-accent" value="#2b6cb0" onchange="previewColor('--accent', this.value)">
+                  <input type="text" id="cfg-color-accent-text" value="#2b6cb0" onchange="document.getElementById('cfg-color-accent').value = this.value; previewColor('--accent', this.value)">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="admin-card">
+            <h3>Logo</h3>
+            <p style="color: var(--gray-600);">Das aktuelle Logo wird als SVG verwendet. Um ein neues Logo hochzuladen, ersetzen Sie die Datei <code>assets/images/logo.svg</code> oder laden Sie hier ein neues Logo hoch.</p>
+            <div style="margin-top: var(--space-md); padding: var(--space-xl); border: 2px dashed var(--gray-300); border-radius: var(--radius-lg); text-align: center;">
+              <img src="../assets/images/logo.svg" alt="Aktuelles Logo" style="height: 60px; margin: 0 auto var(--space-md);">
+              <p style="color: var(--gray-500); font-size: 0.9rem;">Aktuelles Logo</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Nachrichten -->
+        <div id="section-nachrichten" class="admin-section">
+          <div class="admin-card">
+            <h3>Eingegangene Nachrichten & Mitgliedsanträge</h3>
+            <p style="color: var(--gray-600); margin-bottom: var(--space-lg);">Hier sehen Sie alle Nachrichten und Anträge, die über die Website eingegangen sind.</p>
+            <div id="messages-list">
+              <div style="text-align: center; padding: var(--space-3xl); color: var(--gray-400);">
+                <p>Keine neuen Nachrichten vorhanden.</p>
+                <p style="font-size: 0.85rem;">Nachrichten werden hier angezeigt, sobald das Backend eingerichtet ist.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Save notification -->
+  <div class="admin-toast" id="save-toast">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+    <span>Einstellungen gespeichert!</span>
+  </div>
+
+  <script>
+    // Admin Navigation
+    document.querySelectorAll('.admin-nav-item[data-section]').forEach(item => {
+      item.addEventListener('click', function(e) {
+        e.preventDefault();
+        const section = this.dataset.section;
+
+        // Update nav
+        document.querySelectorAll('.admin-nav-item').forEach(el => el.classList.remove('active'));
+        this.classList.add('active');
+
+        // Update content
+        document.querySelectorAll('.admin-section').forEach(el => el.classList.remove('active'));
+        document.getElementById(`section-${section}`).classList.add('active');
+
+        // Update title
+        const titles = {
+          dashboard: 'Dashboard',
+          kontakt: 'Kontaktdaten',
+          oeffnungszeiten: 'Öffnungszeiten',
+          mitgliedschaft: 'Mitgliedschaft',
+          aussenstellen: 'Außenstellen',
+          texte: 'Texte & Inhalte',
+          design: 'Design & Farben',
+          nachrichten: 'Eingegangene Nachrichten'
+        };
+        document.getElementById('section-title').textContent = titles[section] || section;
+      });
+    });
+
+    // Load settings from localStorage
+    function loadSettings() {
+      const settings = JSON.parse(localStorage.getItem('mieterbund-settings') || '{}');
+      Object.keys(settings).forEach(key => {
+        const el = document.getElementById(key);
+        if (el) {
+          if (el.type === 'color') {
+            el.value = settings[key];
+          } else {
+            el.value = settings[key];
+          }
+        }
+      });
+
+      // Load Außenstellen
+      const aussenstellen = settings.aussenstellen || [
+        'Altenkirchen', 'Bad Neuenahr-Ahrweiler', 'Cochem',
+        'Mayen', 'Montabaur', 'Remagen', 'Westerburg'
+      ];
+      renderAussenstellen(aussenstellen);
+
+      // Load message counts
+      const messages = JSON.parse(localStorage.getItem('mieterbund-messages') || '[]');
+      const members = JSON.parse(localStorage.getItem('mieterbund-members') || '[]');
+      document.getElementById('stat-messages').textContent = messages.length;
+      document.getElementById('stat-members').textContent = members.length;
+    }
+
+    // Save settings
+    function saveSettings() {
+      const settings = {};
+      document.querySelectorAll('.admin-section input, .admin-section textarea, .admin-section select').forEach(el => {
+        if (el.id && el.id.startsWith('cfg-')) {
+          settings[el.id] = el.value;
+        }
+      });
+
+      // Save Außenstellen
+      const aussenstellen = [];
+      document.querySelectorAll('.aussenstelle-input').forEach(input => {
+        if (input.value.trim()) aussenstellen.push(input.value.trim());
+      });
+      settings.aussenstellen = aussenstellen;
+
+      localStorage.setItem('mieterbund-settings', JSON.stringify(settings));
+      showToast();
+    }
+
+    // Export settings as JSON
+    function exportSettings() {
+      const settings = JSON.parse(localStorage.getItem('mieterbund-settings') || '{}');
+      const blob = new Blob([JSON.stringify(settings, null, 2)], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'mieterbund-settings.json';
+      a.click();
+      URL.revokeObjectURL(url);
+    }
+
+    // Außenstellen
+    function renderAussenstellen(list) {
+      const container = document.getElementById('aussenstellen-list');
+      container.innerHTML = list.map((name, i) => `
+        <div class="aussenstelle-row" style="display: flex; gap: var(--space-sm); margin-bottom: var(--space-sm); align-items: center;">
+          <input type="text" class="aussenstelle-input" value="${name}" style="flex: 1;">
+          <button class="btn btn-sm" style="background: var(--secondary-light); color: white; border: none; padding: 0.5rem;" onclick="this.parentElement.remove()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </button>
+        </div>
+      `).join('');
+    }
+
+    function addAussenstelle() {
+      const container = document.getElementById('aussenstellen-list');
+      const div = document.createElement('div');
+      div.className = 'aussenstelle-row';
+      div.style.cssText = 'display: flex; gap: var(--space-sm); margin-bottom: var(--space-sm); align-items: center;';
+      div.innerHTML = `
+        <input type="text" class="aussenstelle-input" value="" placeholder="Name der Außenstelle" style="flex: 1;">
+        <button class="btn btn-sm" style="background: var(--secondary-light); color: white; border: none; padding: 0.5rem;" onclick="this.parentElement.remove()">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      `;
+      container.appendChild(div);
+      div.querySelector('input').focus();
+    }
+
+    // Color preview
+    function previewColor(variable, value) {
+      document.documentElement.style.setProperty(variable, value);
+    }
+
+    // Toast notification
+    function showToast() {
+      const toast = document.getElementById('save-toast');
+      toast.classList.add('visible');
+      setTimeout(() => toast.classList.remove('visible'), 3000);
+    }
+
+    // Initialize
+    loadSettings();
+  </script>
+</body>
+</html>

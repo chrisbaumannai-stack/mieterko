@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mitgliedschaft beim Mieterbund Mittelrhein e.V. – Vollmitgliedschaft und Schnuppermitgliedschaft. Jetzt online beitreten.">
+  <title>Mitgliedschaft & Leistungen – Mieterbund Mittelrhein e.V.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" type="image/svg+xml" href="../assets/images/logo.svg">
+</head>
+<body>
+  <div id="top-bar"></div>
+  <div id="header"></div>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="../index.html">Startseite</a>
+        <span>/</span>
+        <span>Mitgliedschaft & Leistungen</span>
+      </div>
+      <h1>Mitgliedschaft & Leistungen</h1>
+      <p>Professioneller Mieterschutz durch qualifizierte Volljuristen – werden Sie Teil unserer Gemeinschaft.</p>
+    </div>
+  </section>
+
+  <!-- Leistungen -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Unsere Leistungen</span>
+        <h2>Was wir für Sie tun</h2>
+        <p>Als Mitglied des Mieterbundes Mittelrhein profitieren Sie von einem umfassenden Leistungspaket.</p>
+      </div>
+      <div class="services-grid" id="leistungen-grid"></div>
+    </div>
+  </section>
+
+  <!-- Mitgliedschaft Details -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Mitgliedschaft</span>
+        <h2>Unsere Mitgliedschaftsmodelle</h2>
+        <p>Wählen Sie das Modell, das am besten zu Ihnen passt.</p>
+      </div>
+      <div class="membership-grid">
+        <div class="membership-card animate-in">
+          <span class="membership-badge">Zum Kennenlernen</span>
+          <h3>Schnuppermitgliedschaft</h3>
+          <div class="membership-price">60 €</div>
+          <div class="membership-period">für 3 Monate</div>
+          <ul class="membership-features">
+            <li id="s-f-1"></li>
+            <li id="s-f-2"></li>
+            <li id="s-f-3"></li>
+            <li id="s-f-4"></li>
+          </ul>
+          <div class="info-box warning" style="text-align: left; margin-bottom: var(--space-lg);">
+            <p><strong>Hinweis:</strong> Wird die Schnuppermitgliedschaft nicht rechtzeitig gekündigt, geht sie automatisch in eine Vollmitgliedschaft über.</p>
+          </div>
+          <a href="#beitritt" class="btn btn-outline" style="width: 100%; justify-content: center;">Schnuppermitglied werden</a>
+        </div>
+        <div class="membership-card featured animate-in">
+          <span class="membership-badge">Empfohlen</span>
+          <h3>Vollmitgliedschaft</h3>
+          <div class="membership-price">120 €</div>
+          <div class="membership-period">pro Jahr (Mindestlaufzeit: 2 Jahre)</div>
+          <ul class="membership-features">
+            <li id="v-f-1"></li>
+            <li id="v-f-2"></li>
+            <li id="v-f-3"></li>
+            <li id="v-f-4"></li>
+            <li id="v-f-5"></li>
+            <li id="v-f-6"></li>
+          </ul>
+          <a href="#beitritt" class="btn btn-primary" style="width: 100%; justify-content: center;">Vollmitglied werden</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Online Beitrittsformular -->
+  <section class="section" id="beitritt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Online-Beitritt</span>
+        <h2>Jetzt Mitglied werden</h2>
+        <p>Füllen Sie das Formular bequem online aus. Kein Ausdrucken, kein Postversand nötig.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-form-wrapper">
+          <form id="beitrittsformular" onsubmit="handleMembershipSubmit(event)">
+            <div class="form-group">
+              <label for="mitgliedschaft-typ">Mitgliedschaftsart *</label>
+              <select id="mitgliedschaft-typ" name="mitgliedschaft_typ" required>
+                <option value="">Bitte wählen...</option>
+                <option value="vollmitgliedschaft">Vollmitgliedschaft (120 €/Jahr)</option>
+                <option value="schnuppermitgliedschaft">Schnuppermitgliedschaft (60 €/3 Monate)</option>
+              </select>
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-md);">
+              <div class="form-group">
+                <label for="anrede">Anrede *</label>
+                <select id="anrede" name="anrede" required>
+                  <option value="">Bitte wählen...</option>
+                  <option value="Herr">Herr</option>
+                  <option value="Frau">Frau</option>
+                  <option value="Divers">Divers</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="titel">Titel</label>
+                <input type="text" id="titel" name="titel" placeholder="z.B. Dr.">
+              </div>
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-md);">
+              <div class="form-group">
+                <label for="vorname">Vorname *</label>
+                <input type="text" id="vorname" name="vorname" required placeholder="Max">
+              </div>
+              <div class="form-group">
+                <label for="nachname">Nachname *</label>
+                <input type="text" id="nachname" name="nachname" required placeholder="Mustermann">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="geburtsdatum">Geburtsdatum *</label>
+              <input type="date" id="geburtsdatum" name="geburtsdatum" required>
+            </div>
+            <div class="form-group">
+              <label for="strasse">Straße und Hausnummer *</label>
+              <input type="text" id="strasse" name="strasse" required placeholder="Musterstraße 1">
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 2fr; gap: var(--space-md);">
+              <div class="form-group">
+                <label for="plz">PLZ *</label>
+                <input type="text" id="plz" name="plz" required placeholder="56068" pattern="[0-9]{5}" maxlength="5">
+              </div>
+              <div class="form-group">
+                <label for="ort">Ort *</label>
+                <input type="text" id="ort" name="ort" required placeholder="Koblenz">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="telefon">Telefon *</label>
+              <input type="tel" id="telefon" name="telefon" required placeholder="0261 12345678">
+            </div>
+            <div class="form-group">
+              <label for="email-form">E-Mail *</label>
+              <input type="email" id="email-form" name="email" required placeholder="max@beispiel.de">
+            </div>
+
+            <hr style="border: none; border-top: 1px solid var(--gray-200); margin: var(--space-xl) 0;">
+            <h4 style="margin-bottom: var(--space-lg);">Angaben zum Mietverhältnis</h4>
+
+            <div class="form-group">
+              <label for="vermieter">Name des Vermieters / der Hausverwaltung</label>
+              <input type="text" id="vermieter" name="vermieter" placeholder="Optional">
+            </div>
+            <div class="form-group">
+              <label for="mietbeginn">Mietbeginn</label>
+              <input type="date" id="mietbeginn" name="mietbeginn">
+            </div>
+            <div class="form-group">
+              <label for="problem">Kurze Beschreibung Ihres Anliegens</label>
+              <textarea id="problem" name="problem" rows="4" placeholder="Beschreiben Sie hier kurz, warum Sie Mitglied werden möchten oder welches Problem Sie haben..."></textarea>
+            </div>
+
+            <hr style="border: none; border-top: 1px solid var(--gray-200); margin: var(--space-xl) 0;">
+
+            <div class="form-group">
+              <label style="display: flex; align-items: flex-start; gap: var(--space-sm); font-weight: 400; cursor: pointer;">
+                <input type="checkbox" id="datenschutz" name="datenschutz" required style="margin-top: 4px; width: auto;">
+                <span>Ich habe die <a href="datenschutz.html" target="_blank">Datenschutzerklärung</a> gelesen und bin mit der Verarbeitung meiner Daten einverstanden. *</span>
+              </label>
+            </div>
+            <div class="form-group">
+              <label style="display: flex; align-items: flex-start; gap: var(--space-sm); font-weight: 400; cursor: pointer;">
+                <input type="checkbox" id="satzung" name="satzung" required style="margin-top: 4px; width: auto;">
+                <span>Ich erkenne die <a href="#" target="_blank">Satzung des Mieterbundes Mittelrhein e.V.</a> an. *</span>
+              </label>
+            </div>
+            <div class="form-group">
+              <label style="display: flex; align-items: flex-start; gap: var(--space-sm); font-weight: 400; cursor: pointer;">
+                <input type="checkbox" id="agb" name="agb" required style="margin-top: 4px; width: auto;">
+                <span>Ich bin damit einverstanden, dass bei Nichtkündigung der Schnuppermitgliedschaft diese automatisch in eine Vollmitgliedschaft übergeht. *</span>
+              </label>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; justify-content: center; margin-top: var(--space-md);">
+              Mitgliedsantrag absenden
+            </button>
+
+            <p style="font-size: 0.85rem; color: var(--gray-500); margin-top: var(--space-md); text-align: center;">
+              * Pflichtfelder. Nach Absenden des Formulars erhalten Sie eine Bestätigung per E-Mail.
+            </p>
+          </form>
+
+          <!-- Success Message (hidden by default) -->
+          <div id="form-success" style="display: none; text-align: center; padding: var(--space-3xl) var(--space-xl);">
+            <div style="width: 64px; height: 64px; background: var(--success-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto var(--space-lg);" id="success-icon"></div>
+            <h3 style="color: var(--success);">Vielen Dank für Ihren Antrag!</h3>
+            <p style="color: var(--gray-600); max-width: 400px; margin: var(--space-md) auto;">Wir haben Ihren Mitgliedsantrag erhalten und werden uns in Kürze bei Ihnen melden. Eine Bestätigung wurde an Ihre E-Mail-Adresse gesendet.</p>
+          </div>
+        </div>
+
+        <div class="contact-info-cards">
+          <div class="contact-info-card">
+            <div class="contact-info-icon" id="info-icon-1"></div>
+            <div>
+              <h4>Digitaler Antrag</h4>
+              <p>Kein Ausdrucken und kein Postversand nötig. Füllen Sie das Formular einfach online aus – wir kümmern uns um den Rest.</p>
+            </div>
+          </div>
+          <div class="contact-info-card">
+            <div class="contact-info-icon" id="info-icon-2"></div>
+            <div>
+              <h4>Sofortige Bestätigung</h4>
+              <p>Nach Absenden erhalten Sie umgehend eine Bestätigung per E-Mail mit allen wichtigen Informationen.</p>
+            </div>
+          </div>
+          <div class="contact-info-card">
+            <div class="contact-info-icon" id="info-icon-3"></div>
+            <div>
+              <h4>Schneller Start</h4>
+              <p>Nach Eingang Ihres Beitrags können Sie sofort einen Beratungstermin vereinbaren: <a href="tel:026115096">0261 – 15 0 96</a></p>
+            </div>
+          </div>
+          <div class="contact-info-card">
+            <div class="contact-info-icon" id="info-icon-4"></div>
+            <div>
+              <h4>PDF-Formulare</h4>
+              <p>Sie möchten den Antrag lieber klassisch per Post senden? Laden Sie die Formulare herunter:</p>
+              <p style="margin-top: var(--space-sm);">
+                <a href="https://mieterbund-mittelrhein.de/wp-content/uploads/2024/10/VollMG.pdf" target="_blank" class="read-more" style="display: block; margin-bottom: 4px;">Vollmitgliedschaft (PDF)</a>
+                <a href="https://mieterbund-mittelrhein.de/wp-content/uploads/2024/06/Schnupper_aktuell.pdf" target="_blank" class="read-more">Schnuppermitgliedschaft (PDF)</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="info-box">
+            <h4 id="info-box-icon">Warum Mitglied werden?</h4>
+            <p>In der Bundesrepublik gibt es über 18 Millionen Mietwohnungen. Alle darin wohnenden Mieter haben die gleichen Interessen und werden weitgehend mit den gleichen Problemen konfrontiert. Als Einzelner steht der Mieter seinem Vermieter häufig machtlos gegenüber. Der Mieterbund setzt sich für Ihre Rechte ein.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section-alt">
+    <div class="container container-narrow">
+      <div class="section-header">
+        <span class="section-label">Häufige Fragen</span>
+        <h2>Fragen zur Mitgliedschaft</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">
+            Wer kann Mitglied werden?
+            <span id="faq-chevron-1"></span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              <p>Mitglied kann jeder werden, der volljährig ist und die Satzung des Mieterbundes Mittelrhein e.V. anerkennt. Es spielt keine Rolle, ob Sie bereits ein konkretes Problem haben oder sich vorsorglich absichern möchten.</p>
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Was ist der Unterschied zwischen Schnupper- und Vollmitgliedschaft?
+            <span id="faq-chevron-2"></span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              <p>Die Schnuppermitgliedschaft (60 € für 3 Monate) ermöglicht Ihnen, unsere Leistungen kennenzulernen. Sie beinhaltet mietrechtliche Beratung und Schriftwechselführung. Wird sie nicht gekündigt, geht sie automatisch in eine Vollmitgliedschaft (120 €/Jahr) über, die zusätzlich Kostenschutz für gerichtliche Verfahren beinhaltet. Die Vollmitgliedschaft hat eine Mindestlaufzeit von 2 Jahren.</p>
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Kann ich auch ohne Mitgliedschaft beraten werden?
+            <span id="faq-chevron-3"></span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              <p>Nein, aufgrund des Rechtsdienstleistungsgesetzes ist es dem Verein nicht gestattet, Nichtmitgliedern Auskünfte zu erteilen. Die Mitgliedschaft ist Voraussetzung für jede mietrechtliche Beratung.</p>
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Wie finanziert sich der Verein?
+            <span id="faq-chevron-4"></span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              <p>Der Mieterbund Mittelrhein e.V. ist ein eingetragener Verein und erhält keinerlei öffentliche Mittel. Die gesamte Arbeit – Personal, Geschäftsräume, Büromaterial – wird ausschließlich über die Mitgliedsbeiträge finanziert.</p>
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Wie bekomme ich einen Beratungstermin?
+            <span id="faq-chevron-5"></span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              <p>Beratungen erfolgen nur nach telefonischer Vereinbarung. Rufen Sie uns an unter <strong>0261 – 15 0 96</strong> (Montag, Mittwoch, Freitag 8:30 – 12:00 Uhr).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="cta-section"></div>
+  <div id="footer"></div>
+
+  <script src="../js/components.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      initPage('leistungen');
+
+      // Leistungen
+      document.getElementById('leistungen-grid').innerHTML = `
+        <div class="service-card animate-in">
+          <div class="service-icon">${Icons.scales}</div>
+          <h3>Mietrechtliche Beratung</h3>
+          <p>Persönliche Beratung durch qualifizierte Volljuristen in allen Fragen des Mietrechts – von der Betriebskostenabrechnung über Mieterhöhungen bis hin zum Kündigungsschutz.</p>
+        </div>
+        <div class="service-card animate-in">
+          <div class="service-icon">${Icons.mail}</div>
+          <h3>Schriftwechselführung</h3>
+          <p>Wir führen die gesamte Korrespondenz mit Vermietern und deren Rechtsanwälten für Sie – professionell, rechtssicher und in Ihrem Interesse.</p>
+        </div>
+        <div class="service-card animate-in">
+          <div class="service-icon">${Icons.shield}</div>
+          <h3>Kostenschutz</h3>
+          <p>Im Rahmen unserer Satzung übernehmen wir die Kosten für gerichtliche Verfahren in mietrechtlichen Angelegenheiten – ein wesentlicher Vorteil der Vollmitgliedschaft.</p>
+        </div>
+        <div class="service-card animate-in">
+          <div class="service-icon">${Icons.newspaper}</div>
+          <h3>Mieterzeitung</h3>
+          <p>Alle zwei Monate erhalten Sie unsere Mieterzeitung mit aktuellen Informationen, Urteilen und Neuigkeiten rund ums Mietrecht.</p>
+        </div>
+      `;
+
+      // Membership features
+      const sFeatures = ['Mietrechtliche Beratung', 'Schriftwechselführung', 'Mieterzeitung', 'Laufzeit: 3 Monate'];
+      const vFeatures = ['Mietrechtliche Beratung', 'Schriftwechselführung', 'Kostenschutz (Gericht)', 'Mieterzeitung', 'Vertretung in Streitigkeiten', 'Umfassender Mieterschutz'];
+
+      sFeatures.forEach((f, i) => {
+        document.getElementById(`s-f-${i+1}`).innerHTML = `${Icons.check} ${f}`;
+      });
+      vFeatures.forEach((f, i) => {
+        document.getElementById(`v-f-${i+1}`).innerHTML = `${Icons.check} ${f}`;
+      });
+
+      // Info icons
+      document.getElementById('info-icon-1').innerHTML = Icons.clipboardCheck;
+      document.getElementById('info-icon-2').innerHTML = Icons.mail;
+      document.getElementById('info-icon-3').innerHTML = Icons.phone;
+      document.getElementById('info-icon-4').innerHTML = Icons.download;
+
+      document.getElementById('info-box-icon').innerHTML = `${Icons.info} Warum Mitglied werden?`;
+
+      // FAQ chevrons
+      for (let i = 1; i <= 5; i++) {
+        document.getElementById(`faq-chevron-${i}`).innerHTML = Icons.chevronDown;
+      }
+    });
+
+    function handleMembershipSubmit(e) {
+      e.preventDefault();
+      const form = document.getElementById('beitrittsformular');
+      const formData = new FormData(form);
+
+      // In production, this would submit to a backend
+      // For now, show success message
+      form.style.display = 'none';
+      const success = document.getElementById('form-success');
+      success.style.display = 'block';
+      document.getElementById('success-icon').innerHTML = '<svg style="width:32px;height:32px;stroke:white;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>';
+
+      // Scroll to success message
+      success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  </script>
+</body>
+</html>

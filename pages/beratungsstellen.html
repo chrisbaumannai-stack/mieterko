@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Beratungsstellen des Mieterbundes Mittelrhein e.V. – Geschäftsstellen in Koblenz und Neuwied sowie Außenstellen in der Region.">
+  <title>Beratungsstellen – Mieterbund Mittelrhein e.V.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" type="image/svg+xml" href="../assets/images/logo.svg">
+</head>
+<body>
+  <div id="top-bar"></div>
+  <div id="header"></div>
+
+  <section class="page-header">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="../index.html">Startseite</a>
+        <span>/</span>
+        <span>Beratungsstellen</span>
+      </div>
+      <h1>Unsere Beratungsstellen</h1>
+      <p>Mietrechtliche Beratung in Koblenz, Neuwied und zahlreichen Außenstellen der Region Mittelrhein.</p>
+    </div>
+  </section>
+
+  <!-- Hauptstellen -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Geschäftsstellen</span>
+        <h2>Unsere Hauptstandorte</h2>
+        <p>Persönliche Beratung durch Volljuristen in unseren beiden Geschäftsstellen.</p>
+      </div>
+      <div class="locations-grid">
+        <div class="location-card main-location animate-in">
+          <h3 id="loc-icon-1">Geschäftsstelle Koblenz</h3>
+          <div class="location-info">
+            <div class="location-info-item" id="loc-addr-1">
+            </div>
+            <div class="location-info-item" id="loc-phone-1">
+            </div>
+            <div class="location-info-item" id="loc-fax-1">
+            </div>
+            <div class="location-info-item" id="loc-email-1">
+            </div>
+            <div class="location-info-item" id="loc-hours-1">
+            </div>
+          </div>
+        </div>
+        <div class="location-card main-location animate-in">
+          <h3 id="loc-icon-2">Geschäftsstelle Neuwied</h3>
+          <div class="location-info">
+            <div class="location-info-item" id="loc-addr-2">
+            </div>
+            <div class="location-info-item" id="loc-phone-2">
+            </div>
+            <div class="location-info-item" id="loc-hours-2">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="info-box" style="margin-top: var(--space-2xl); max-width: 800px; margin-left: auto; margin-right: auto;">
+        <h4 id="info-icon-beratung">Beratung nur nach Vereinbarung</h4>
+        <p>Beratungstermine werden ausschließlich telefonisch vergeben. Rufen Sie uns an unter <strong><a href="tel:026115096">0261 – 15 0 96</a></strong> (Montag, Mittwoch und Freitag von 8:30 – 12:00 Uhr). Bitte beachten Sie, dass wir aufgrund des Rechtsdienstleistungsgesetzes nur Mitglieder beraten dürfen.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Außenstellen -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Außenstellen</span>
+        <h2>Beratung in Ihrer Nähe</h2>
+        <p>Neben unseren Geschäftsstellen bieten wir Beratungen in zahlreichen Außenstellen der Region an. Termine werden über die Hauptgeschäftsstelle vergeben.</p>
+      </div>
+      <div class="services-grid" id="aussenstellen-cards"></div>
+      <div style="text-align: center; margin-top: var(--space-2xl);">
+        <p style="color: var(--gray-600); font-size: 0.95rem;">Für Terminvereinbarungen an allen Außenstellen wenden Sie sich bitte an unsere Hauptgeschäftsstelle:</p>
+        <a href="tel:026115096" class="btn btn-primary btn-lg" style="margin-top: var(--space-md);">
+          0261 – 15 0 96 anrufen
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map placeholder -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Anfahrt</span>
+        <h2>So finden Sie uns</h2>
+      </div>
+      <div style="background: var(--gray-100); border-radius: var(--radius-xl); padding: var(--space-3xl); text-align: center; border: 2px dashed var(--gray-300);">
+        <div id="map-icon" style="margin-bottom: var(--space-md);"></div>
+        <h3 style="color: var(--gray-600);">Geschäftsstelle Koblenz</h3>
+        <p style="color: var(--gray-500);">Markenbildchenweg 15, 56068 Koblenz</p>
+        <a href="https://www.google.com/maps/search/?api=1&query=Markenbildchenweg+15+56068+Koblenz" target="_blank" rel="noopener" class="btn btn-outline" style="margin-top: var(--space-md);">
+          In Google Maps öffnen
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <div id="cta-section"></div>
+  <div id="footer"></div>
+
+  <script src="../js/components.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      initPage('beratungsstellen');
+
+      // Location icons
+      document.getElementById('loc-icon-1').innerHTML = `${Icons.building} Geschäftsstelle Koblenz`;
+      document.getElementById('loc-icon-2').innerHTML = `${Icons.building} Geschäftsstelle Neuwied`;
+
+      // Koblenz details
+      document.getElementById('loc-addr-1').innerHTML = `${Icons.mapPin} <span>Markenbildchenweg 15<br>56068 Koblenz</span>`;
+      document.getElementById('loc-phone-1').innerHTML = `${Icons.phone} <span><a href="tel:026115096">0261 – 15 0 96</a></span>`;
+      document.getElementById('loc-fax-1').innerHTML = `${Icons.fax} <span>0261 – 157 00</span>`;
+      document.getElementById('loc-email-1').innerHTML = `${Icons.mail} <span><a href="mailto:koblenz@mieterbund-mittelrhein.de">koblenz@mieterbund-mittelrhein.de</a></span>`;
+      document.getElementById('loc-hours-1').innerHTML = `${Icons.clock} <div>
+        <strong>Bürozeiten:</strong><br>
+        Mo, Mi, Fr: 08:30 – 12:00 Uhr<br>
+        Di, Do: 13:30 – 17:00 Uhr
+      </div>`;
+
+      // Neuwied details
+      document.getElementById('loc-addr-2').innerHTML = `${Icons.mapPin} <span>Hermannstraße 32<br>56564 Neuwied</span>`;
+      document.getElementById('loc-phone-2').innerHTML = `${Icons.phone} <span><a href="tel:0263124547">02631 – 24 54 7</a></span>`;
+      document.getElementById('loc-hours-2').innerHTML = `${Icons.clock} <div>
+        <strong>Beratung:</strong><br>
+        Termine nach telefonischer Vereinbarung<br>
+        über die Hauptgeschäftsstelle Koblenz
+      </div>`;
+
+      document.getElementById('info-icon-beratung').innerHTML = `${Icons.info} Beratung nur nach Vereinbarung`;
+
+      // Außenstellen
+      const aussenstellen = [
+        { name: 'Altenkirchen', desc: 'Beratung nach telefonischer Vereinbarung über die Hauptgeschäftsstelle Koblenz.' },
+        { name: 'Bad Neuenahr-Ahrweiler', desc: 'Beratung nach telefonischer Vereinbarung über die Hauptgeschäftsstelle Koblenz.' },
+        { name: 'Cochem', desc: 'Beratung nach telefonischer Vereinbarung über die Hauptgeschäftsstelle Koblenz.' },
+        { name: 'Mayen', desc: 'Beratung nach telefonischer Vereinbarung über die Hauptgeschäftsstelle Koblenz.' },
+        { name: 'Montabaur', desc: 'Beratung nach telefonischer Vereinbarung über die Hauptgeschäftsstelle Koblenz.' },
+        { name: 'Remagen', desc: 'Beratung nach telefonischer Vereinbarung über die Hauptgeschäftsstelle Koblenz.' },
+        { name: 'Westerburg', desc: 'Beratung nach telefonischer Vereinbarung über die Hauptgeschäftsstelle Koblenz.' }
+      ];
+
+      document.getElementById('aussenstellen-cards').innerHTML = aussenstellen.map(s => `
+        <div class="service-card animate-in">
+          <div class="service-icon">${Icons.mapPin}</div>
+          <h3>${s.name}</h3>
+          <p>${s.desc}</p>
+        </div>
+      `).join('');
+
+      document.getElementById('map-icon').innerHTML = `<div style="width: 48px; height: 48px; margin: 0 auto;">${Icons.mapPin}</div>`;
+    });
+  </script>
+</body>
+</html>

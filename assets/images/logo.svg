@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" width="200" height="60">
+  <!-- Haus/Schild Symbol -->
+  <g transform="translate(5, 5)">
+    <!-- Schild/Haus Form -->
+    <path d="M25 0 L50 15 L50 40 L25 50 L0 40 L0 15 Z" fill="#1a365d" stroke="none"/>
+    <!-- Haus Inneres -->
+    <path d="M25 8 L42 18 L42 36 L25 44 L8 36 L8 18 Z" fill="#2c5282" stroke="none"/>
+    <!-- Dach -->
+    <path d="M25 12 L38 20 L25 20 L12 20 Z" fill="#ffffff" opacity="0.9"/>
+    <!-- Haus Körper -->
+    <rect x="17" y="22" width="16" height="14" rx="1" fill="#ffffff" opacity="0.9"/>
+    <!-- Tür -->
+    <rect x="22" y="28" width="6" height="8" rx="1" fill="#1a365d"/>
+    <!-- Fenster -->
+    <rect x="19" y="24" width="5" height="4" rx="0.5" fill="#4299e1"/>
+    <rect x="26" y="24" width="5" height="4" rx="0.5" fill="#4299e1"/>
+  </g>
+  <!-- Text -->
+  <text x="62" y="24" font-family="'Inter', 'Segoe UI', system-ui, sans-serif" font-weight="700" font-size="16" fill="#1a365d">MIETERBUND</text>
+  <text x="62" y="42" font-family="'Inter', 'Segoe UI', system-ui, sans-serif" font-weight="700" font-size="16" fill="#1a365d">MITTELRHEIN</text>
+  <text x="62" y="55" font-family="'Inter', 'Segoe UI', system-ui, sans-serif" font-weight="400" font-size="9" fill="#718096">e.V. – Seit 1919 für Mieterrechte</text>
+</svg>
