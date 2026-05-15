@@ -149,6 +149,7 @@ function renderFooter() {
       </div>
       <div class="footer-bottom">
         <span>&copy; ${new Date().getFullYear()} Mieterbund Mittelrhein e.V. Alle Rechte vorbehalten.</span>
+        <span class="footer-credit">Konzept &amp; Realisierung: <strong>Brain Arts</strong></span>
         <div class="footer-bottom-links">
           <a href="${base}pages/impressum.html">Impressum</a>
           <a href="${base}pages/datenschutz.html">Datenschutz</a>
@@ -202,31 +203,42 @@ function initPage(activePage) {
     document.body.appendChild(btn);
   }
 
-  // Scroll listener for back-to-top
-  window.addEventListener('scroll', () => {
+  // Scroll listener: back-to-top button + condensed header
+  const headerEl2 = document.querySelector('.header');
+  const onScroll = () => {
     const btn = document.querySelector('.back-to-top');
     if (btn) {
-      if (window.scrollY > 400) {
-        btn.classList.add('visible');
-      } else {
-        btn.classList.remove('visible');
-      }
+      btn.classList.toggle('visible', window.scrollY > 400);
     }
-  });
+    if (headerEl2) {
+      headerEl2.classList.toggle('scrolled', window.scrollY > 20);
+    }
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
 
-  // Intersection observer for animations
-  const animateElements = document.querySelectorAll('.animate-in');
-  if (animateElements.length > 0) {
+  // Intersection observer for staggered scroll reveal.
+  // Deferred so that .animate-in elements injected by inline page
+  // scripts (which run after initPage) are also observed.
+  setTimeout(() => {
+    const animateElements = document.querySelectorAll('.animate-in');
+    if (animateElements.length === 0) return;
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
+          const el = entry.target;
+          const siblings = el.parentElement
+            ? Array.from(el.parentElement.querySelectorAll(':scope > .animate-in'))
+            : [el];
+          const index = siblings.indexOf(el);
+          el.style.transitionDelay = (Math.max(index, 0) % 4) * 90 + 'ms';
+          el.classList.add('visible');
+          observer.unobserve(el);
         }
       });
-    }, { threshold: 0.1 });
+    }, { threshold: 0.12 });
     animateElements.forEach(el => observer.observe(el));
-  }
+  }, 0);
 
   // FAQ accordion
   document.querySelectorAll('.faq-question').forEach(btn => {
