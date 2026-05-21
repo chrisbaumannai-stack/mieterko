@@ -1826,6 +1826,73 @@ strong {
   height: 21px;
 }
 
+/* --- Skip Link (Accessibility) --- */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 10000;
+  padding: 0.7rem 1.1rem;
+  background: var(--navy);
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 0 0 var(--radius-md) 0;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  left: 0;
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  color: #fff;
+}
+
+/* --- Mobile Sticky Call-CTA --- */
+.mobile-cta {
+  display: none;
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 998;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.85rem 1.2rem;
+  background: var(--accent);
+  color: #fff;
+  border-radius: var(--radius-full);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  box-shadow: 0 14px 30px -10px rgba(176, 125, 60, 0.6), 0 4px 10px rgba(26, 34, 51, 0.18);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal), background var(--transition-normal);
+}
+
+.mobile-cta:hover,
+.mobile-cta:focus-visible {
+  background: var(--accent-dark);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.mobile-cta svg {
+  width: 20px;
+  height: 20px;
+  stroke: #fff;
+}
+
+.mobile-cta::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.35);
+  animation: pulse 2s infinite;
+  flex-shrink: 0;
+}
+
 /* --- Scroll Reveal --- */
 .animate-in {
   opacity: 0;
@@ -1949,6 +2016,17 @@ strong {
 
   .section-header {
     margin-bottom: var(--space-xl);
+  }
+
+  .mobile-cta {
+    display: inline-flex;
+  }
+
+  .back-to-top {
+    bottom: 5.2rem;
+    right: 1rem;
+    width: 42px;
+    height: 42px;
   }
 }
 

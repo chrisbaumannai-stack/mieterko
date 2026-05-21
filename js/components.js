@@ -177,6 +177,15 @@ function renderCTA() {
 
 // Initialize page
 function initPage(activePage) {
+  // Skip link for keyboard users (a11y)
+  if (!document.querySelector('.skip-link')) {
+    const skip = document.createElement('a');
+    skip.className = 'skip-link';
+    skip.href = '#main-content';
+    skip.textContent = 'Zum Inhalt springen';
+    document.body.insertBefore(skip, document.body.firstChild);
+  }
+
   // Insert top bar
   const topBarEl = document.getElementById('top-bar');
   if (topBarEl) topBarEl.innerHTML = renderTopBar();
@@ -184,6 +193,14 @@ function initPage(activePage) {
   // Insert header
   const headerEl = document.getElementById('header');
   if (headerEl) headerEl.innerHTML = renderHeader(activePage);
+
+  // Designate the first content section (after header) as main landmark
+  const firstSection = document.querySelector('#header ~ section, #header + section, body > section');
+  if (firstSection && !document.getElementById('main-content')) {
+    firstSection.id = 'main-content';
+    firstSection.setAttribute('role', 'main');
+    firstSection.setAttribute('tabindex', '-1');
+  }
 
   // Insert CTA
   const ctaEl = document.getElementById('cta-section');
@@ -201,6 +218,16 @@ function initPage(activePage) {
     btn.innerHTML = Icons.arrowUp;
     btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
     document.body.appendChild(btn);
+  }
+
+  // Insert sticky mobile call-CTA (Brain Arts principle: contact channel prominent)
+  if (!document.querySelector('.mobile-cta')) {
+    const cta = document.createElement('a');
+    cta.className = 'mobile-cta';
+    cta.href = 'tel:026115096';
+    cta.setAttribute('aria-label', 'Jetzt anrufen: 0261 15096');
+    cta.innerHTML = Icons.phone + '<span>Anrufen</span>';
+    document.body.appendChild(cta);
   }
 
   // Scroll listener: back-to-top button + condensed header
