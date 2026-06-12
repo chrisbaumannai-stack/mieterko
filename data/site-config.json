@@ -74,13 +74,13 @@
   ],
   "vereinsregister": "VerR 20722, Amtsgericht Koblenz",
   "farben": {
-    "primary": "#1a365d",
-    "primary_light": "#2c5282",
-    "secondary": "#c53030",
-    "accent": "#2b6cb0",
-    "success": "#276749",
-    "background": "#f7fafc",
-    "text": "#1a202c"
+    "primary": "#1b3a5b",
+    "primary_light": "#2c5378",
+    "secondary": "#a23b36",
+    "accent": "#b07d3c",
+    "success": "#3b6b53",
+    "background": "#fbfaf7",
+    "text": "#1a2233"
   },
   "social_media": {
     "facebook": "",
